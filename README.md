@@ -1,7 +1,7 @@
 # MaillabelCompare
 Extraction of data from docx file and writing it to another file.
 
-#Details
+# Details
 
 Two files with Mail addresses labels.
 One file[file1] contains all the Mail addresses
