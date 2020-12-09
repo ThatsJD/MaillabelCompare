@@ -12,6 +12,7 @@ Format for the file should be preserved.
 
 This project is based on one of my random work... It can be altered to your needs.
 
-Libraries:
-
+# Libraries:
+* docx
+* docxpython
 
