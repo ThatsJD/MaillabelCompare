@@ -2,6 +2,7 @@
 Extraction of data from docx file and writing it to another file.
 
 #Details
+
 Two files with Mail addresses labels.
 One file[file1] contains all the Mail addresses
 another file[file2] contains some rondom mail addresses
