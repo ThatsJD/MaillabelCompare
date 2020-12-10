@@ -1,8 +1,6 @@
 from docx2python import docx2python
 from docx import Document
-import pandas as pd
 from docx import table
-from pandas._config import display
 
 from functions import writeToFile
 
@@ -35,7 +33,6 @@ for innerbody in doc2body:
         doc2list[row[2][0]] = row[2]
         doc2list[row[4][0]] = row[4]
         count += 1
-print("Document 2: {RYANSTORELABELS} List", len(doc2list), "Count : ", count)
 
 notpresent = list()
 present = list()
@@ -48,22 +45,14 @@ for record in doc2list.values():
             present.append(record)
     else:
         notpresent.append(record)
-print("Addresses common in both ", len(present))
-print("Addresses in RYANSTORELABELS not present in MASTERRYANLABELFILE are ", len(notpresent))
-print("Total ", len(notpresent) + len(present))
-print("Printing Names of uncommon addresses", notpresent)
-print("Printing Names of common addresses", present)
-df=pd.DataFrame(notpresent)
-pd.set_option('display.max_rows',None)
-pd.set_option('display.max_columns',None)
-print(df)
+
 document1 = Document(docx="D:\\PycharmProjects\\docfilefinder\\MASTERRYANLABELFILE.docx")
 tables = document1.tables
 for tab in tables:
     print("Columns: ", len(tab.columns), "Rows: ", len(tab.rows))
 tab = tables[0]
 
-#writeToFile(notpresent, document1, tab)
+writeToFile(notpresent, document1, tab)
 
 
 
