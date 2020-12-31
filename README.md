@@ -15,4 +15,3 @@ This project is based on one of my random work... It can be altered to your need
 # Libraries:
 * docx
 * docxpython
-
